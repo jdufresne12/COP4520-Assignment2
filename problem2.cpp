@@ -21,7 +21,7 @@
 using namespace std;
 
 const int N = 20;                // Number of Guests
-std::queue<int> Line;           // Line of people waiting to view vase
+queue<int> Line;           // Line of people waiting to view vase
 mutex mu;                       // object for lock
 condition_variable viewStatus;  // CV to keep track of if the vase can be viewed or not 
 int currentGuest;               // Which guest is currently viewing the vase 
