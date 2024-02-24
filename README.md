@@ -1,7 +1,7 @@
 # COP4520-Assignment2
 
 ## How to run
-- ### Problem 2
+- ### Problem 1
   ```command
   g++ problem1.cpp -o problem1 -std=c++20
   ./problem1
