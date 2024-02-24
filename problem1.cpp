@@ -22,6 +22,7 @@ vector<bool> hadCupcake(N, false);  // Keeps track if guest has had cupcake
 int entered = 0;                    // Number of guests entered, kept track of by counterGuest
 int currentGuest;                   // Current guest called by minotaur
 
+// Random number generator
 int getRandomInt(int min, int max){
     random_device seed;
     mt19937 rng(seed());
@@ -29,6 +30,7 @@ int getRandomInt(int min, int max){
     return dist(rng);
 }
 
+// Guest keeping track of amount cupcakes replaced 
 void counterGuest_inLab(){
     while (entered < N){   
         mu.lock();
@@ -48,6 +50,7 @@ void counterGuest_inLab(){
     }
 }
 
+// Other guests
 void guest_inLab(int idx){
     while (entered < N){
         mu.lock();
